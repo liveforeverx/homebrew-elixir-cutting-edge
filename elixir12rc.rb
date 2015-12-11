@@ -20,7 +20,7 @@ class Erlang18Requirement < Requirement
   end
 end
 
-class Elixir < Formula
+class Elixir12rc < Formula
   desc "Functional metaprogramming aware language built on Erlang VM"
   homepage "http://elixir-lang.org/"
   url "https://github.com/elixir-lang/elixir/archive/v1.2.0-rc.0.tar.gz"
