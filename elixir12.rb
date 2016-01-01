@@ -20,11 +20,11 @@ class Erlang18Requirement < Requirement
   end
 end
 
-class Elixir12rc < Formula
+class Elixir12 < Formula
   desc "Functional metaprogramming aware language built on Erlang VM"
   homepage "http://elixir-lang.org/"
-  url "https://github.com/elixir-lang/elixir/archive/v1.2.0-rc.1.tar.gz"
-  sha256 "12444084c2f53cc6daa0ed0b33b6c584a4ebb65befc97f4ccfdf00cebf4b5ad2"
+  url "https://github.com/elixir-lang/elixir/archive/v1.2.0.tar.gz"
+  sha256 "9f68ee5213b883c91f2f521df1f773ceec5913dbf075f7781b57ac97543e7268"
 
   head "https://github.com/elixir-lang/elixir.git"
 
