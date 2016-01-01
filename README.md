@@ -6,5 +6,5 @@ important features)
 ## Usage
 
 ```bash
-brew install liveforeverx/elixir-cutting-edge/elixir12rc
+brew install liveforeverx/elixir-cutting-edge/elixir12
 ```
