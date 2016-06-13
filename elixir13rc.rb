@@ -23,8 +23,8 @@ end
 class Elixir13rc < Formula
   desc "Functional metaprogramming aware language built on Erlang VM"
   homepage "http://elixir-lang.org/"
-  url "https://github.com/elixir-lang/elixir/archive/v1.3.0-rc.0.zip"
-  sha256 "5a5af716f6ed8000fc015a97f8b3aa50e926de0638b812e1a275de2cc9e8bf3a"
+  url "https://github.com/elixir-lang/elixir/archive/v1.3.0-rc.1.zip"
+  sha256 "54a9c5278b7c579123cca4bc6542a7403571514c7cdedad52d61d75fa02fbcc5"
 
   head "https://github.com/elixir-lang/elixir.git"
 
