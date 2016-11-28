@@ -6,8 +6,8 @@ class Erlang18Requirement < Requirement
   satisfy do
     erl = which("erl")
     next unless erl
-    `#{erl} -noshell -eval 'io:fwrite("~s~n", [erlang:system_info(otp_release)]).' -s erlang halt | grep -q '^1[89]'`
-    $?.exitstatus == 0
+    `#{erl} -noshell -eval 'io:fwrite("~s", [erlang:system_info(otp_release) >= "18"])' -s erlang halt | grep -q '^true'`
+    $?.exitstatus.zero?
   end
 
   def message; <<-EOS.undent
@@ -20,11 +20,11 @@ class Erlang18Requirement < Requirement
   end
 end
 
-class Elixir13rc < Formula
+class Elixir14rc < Formula
   desc "Functional metaprogramming aware language built on Erlang VM"
   homepage "http://elixir-lang.org/"
-  url "https://github.com/elixir-lang/elixir/archive/v1.3.0-rc.1.zip"
-  sha256 "54a9c5278b7c579123cca4bc6542a7403571514c7cdedad52d61d75fa02fbcc5"
+  url "https://github.com/elixir-lang/elixir/archive/v1.4.0-rc.0.zip"
+  sha256 "eaa9e485c540c006a0ee257d507636a9101a7cb28f0789ae9eadc5b380442c25"
 
   head "https://github.com/elixir-lang/elixir.git"
 
