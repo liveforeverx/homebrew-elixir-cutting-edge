@@ -6,5 +6,6 @@ important features)
 ## Usage
 
 ```bash
-brew install liveforeverx/elixir-cutting-edge/elixir13rc
+brew install liveforeverx/elixir-cutting-edge/elixir16rc
+brew link elixir16rc
 ```
