@@ -1,30 +1,30 @@
 class Erlang18Requirement < Requirement
   fatal true
-  env :userpaths
   default_formula "erlang"
 
   satisfy do
     erl = which("erl")
     next unless erl
     `#{erl} -noshell -eval 'io:fwrite("~s", [erlang:system_info(otp_release) >= "18"])' -s erlang halt | grep -q '^true'`
-    $?.exitstatus.zero?
+    next unless $CHILD_STATUS.exitstatus.zero?
+    erl
   end
 
-  def message; <<-EOS.undent
+  def message; <<~EOS
     Erlang 18+ is required to install.
     You can install this with:
       brew install erlang
     Or you can use an official installer from:
-      http://www.erlang.org/
+      https://www.erlang.org/
     EOS
   end
 end
 
-class Elixir14rc < Formula
+class Elixir16rc < Formula
   desc "Functional metaprogramming aware language built on Erlang VM"
-  homepage "http://elixir-lang.org/"
-  url "https://github.com/elixir-lang/elixir/archive/v1.4.0-rc.0.zip"
-  sha256 "eaa9e485c540c006a0ee257d507636a9101a7cb28f0789ae9eadc5b380442c25"
+  homepage "https://elixir-lang.org/"
+  url "https://github.com/elixir-lang/elixir/archive/v1.6.0-rc.0.tar.gz"
+  sha256 "372f7469310453df02ae0fbde560d5827834c92b7f7cfb5c50e80dd453f7da97"
 
   head "https://github.com/elixir-lang/elixir.git"
 
